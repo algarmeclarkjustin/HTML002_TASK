@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMCC-CCIS-EVENT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/ccis_logo.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="top-header">
+        <h1>SMCC-CCIS Week 2026 - Campus Event Showcase</h1>
+        <p>
+          Celebrating innovation, technology, and collaboration accross the
+          campus.
+        </p>
+      </header>
+      <nav>
+        <a href="#Overview">Overview</a>
+        <a href="#Schedule">Schedule</a>
+        <a href="#location">location</a>
+        <a href="#Registration">Registration</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#Demo">Tech Demo</a>
+      </nav>
+      <div class="container">
+        <section>
+          <article id="Overview" class="card">
+            <h2>Event Overview</h2>
+          </article >
+            
+          <article id="Schedule" class="card">
+            <h2>Event Schedule</h2>
+
+            <p>Here is the simplified Schedule of activities</p>
+
+            <ul>
+              <li>Day 1 &rarr; Opening Program</li>
+              <li>Day 2 &rarr; Poster Making</li>
+              <li>Day 3 &rarr; Web Design</li>
+              <li>Day 4 &rarr; Capture the flag(CTF)</li>
+              <li>Day 5 &rarr; Awarding Ceremony and Closing Program</li>
+            </ul>
+          </article>
+
+          <article id="location" class="card">
+            <h2>2. Event Location and Map</h2>
+            <p>
+              All events will be held at the <b>SMCC Main Campus - IT Building</b>
+              <code>&lt;iframe&gt;</code>. The iframe uses a relative width
+              percentage to help responsiveness.
+            </p>
+
+            <div style="position: relative; padding-bottom: 60.00%; height: 0; overflow: hidden; border-radius: 8px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8263786192256!2d125.33938315710479!3d8.988118731784656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1782896727979!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </article>
+
+          <article>
+            
+          </article>
+          <article id="forms" class="card">
+            <h2>
+              Event Registration Form
+            </h2>
+            <p>
+              Please Complete the form below to register for SMCC-CCIS Week 2026.
+            </p><br>
+            <form id="event-form" onsubmit="registerStudent(event)">
+              <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" class="fullname" id="fullname" placeholder="Enter your complete name" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="email" id="email" placeholder="example@gmail.com" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="studentid">Student ID Number:</label>
+                <input type="text" class="stud_id" id="stud_id" placeholder="Example: 202620012" pattern="[0-9]{9}" title="Student ID should contain exactly 9 digitis." required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" class="contact_num" id="contact_num" placeholder="Example: 09123456789" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" class="birthdate" id="birthdate" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="arrivaltime">Prefered Arrival time:</label>
+                <input type="time" class="arrivaltime" id="arrivaltime" required><br>
+              </div>
+
+              <div class="form-group">
+                <label for="course">Program and Year:</label>
+                <select name="program" id="program" required>
+                  <option value="">Select Course</option>
+                  <option value="BSCS">BS in Computer Science</option>
+                  <option value="BSIT">BS in Information Technology</option>
+                  <option value="BLIS">Bachelor of Library Information Sytem</option>
+                  <option value="BSIS">BS in Information System</option>
+                </select>
+
+                <select name="year" id="year" required>
+                  <option value="">Year</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div><br>
+
+              <label>Participant type:</label><br><br><br>
+              <div class="radio-group">
+                <label>Student</label>
+                <input type="radio" id="student" class="student">
+
+                <label>Faculty</label>
+                <input type="radio" id="faculty" class="faculty">
+
+                <label>Guest</label>
+                <input type="radio" id="guest" class="guest">
+              </div>
+
+            </form>
+
+          </article>
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+        <aside></aside>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>
