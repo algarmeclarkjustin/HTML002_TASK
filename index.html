@@ -33,7 +33,7 @@
         <a href="#Overview">Overview</a>
         <a href="#Schedule">Schedule</a>
         <a href="#location">location</a>
-        <a href="#Registration">Registration</a>
+        <a href="#forms">Registration</a>
         <a href="#FAQ">FAQ</a>
         <a href="#Demo">Tech Demo</a>
       </nav>
@@ -41,6 +41,18 @@
         <section>
           <article id="Overview" class="card">
             <h2>Event Overview</h2>
+
+            <p>
+              <b>SMCC-CCIS Week 2026</b> is an annual campus event that
+              highlights student projects, programming skills, innovation,
+              cybersecurity awareness, and collaboration among future IT
+              professionals.
+            </p><br>
+
+            <p>
+              Join us for a week of learning, networking, and fun & excitement
+              as we celebrate technology in education. ✓
+            </p>
           </article>
 
           <article id="Schedule" class="card">
@@ -179,13 +191,28 @@
               <label>Participant type:</label><br /><br /><br />
               <div class="radio-group">
                 <label>Student</label>
-                <input type="radio" name="participant" id="student" class="student" />
+                <input
+                  type="radio"
+                  name="participant"
+                  id="student"
+                  class="student"
+                />
 
                 <label>Faculty</label>
-                <input type="radio" name="participant" id="faculty" class="faculty" />
+                <input
+                  type="radio"
+                  name="participant"
+                  id="faculty"
+                  class="faculty"
+                />
 
                 <label>Guest</label>
-                <input type="radio" name="participant" id="guest" class="guest" />
+                <input
+                  type="radio"
+                  name="participant"
+                  id="guest"
+                  class="guest"
+                />
               </div>
               <br /><br />
 
@@ -203,7 +230,12 @@
 
               <div>
                 <label for="">Upload Proof of Registration or School ID:</label>
-                <input type="file" name="file" id="file" accept=".png,.jpg,.jpeg,.pdf"><br /><br />
+                <input
+                  type="file"
+                  name="file"
+                  id="file"
+                  accept=".png,.jpg,.jpeg,.pdf"
+                /><br /><br />
               </div>
 
               <div>
@@ -218,7 +250,9 @@
               </div>
 
               <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                <button class="primary-btn" type="submit">Submit Registration</button>
+                <button class="primary-btn" type="submit">
+                  Submit Registration
+                </button>
                 <button class="reset-btn" type="submit">Clear Form</button>
               </div>
               <p id="form-result" class="success"></p>
