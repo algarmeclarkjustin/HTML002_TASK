@@ -12,6 +12,27 @@ body {
     color: rgb(255, 255, 255);
 }
 
+header {
+    background: #008000;
+    color: #fff;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+header p{
+    margin-top: 15px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+}
+
 nav {
     background: rgb(201,198,198);
     display: flex;
@@ -34,9 +55,9 @@ nav a:hover {
 }
 
 .card {
-    background-color: rgb(238, 240, 238);
-    border-radius: 8px;
-    padding: 15px 20px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -96,4 +117,20 @@ input, select {
 .success {
     color: green;
     font-weight: bold;
+}
+
+.sidebar {
+    flex: 1 1 200px;
+    background-color: #ffffff;
+    background: white;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+aside {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
 }
