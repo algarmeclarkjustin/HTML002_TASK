@@ -102,11 +102,6 @@ input, select {
     align-items: flex-start;
 }
 
-.container section {
-    flex: 3;
-    max-width: 0;
-}
-
 .map-container {
     position: relative;
     overflow: hidden;
