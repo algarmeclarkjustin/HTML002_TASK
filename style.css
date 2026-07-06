@@ -102,7 +102,9 @@ input, select {
     align-items: flex-start;
 }
 
-.content
+.content {
+    flex: 3;
+}
 
 .map-container {
     position: relative;
