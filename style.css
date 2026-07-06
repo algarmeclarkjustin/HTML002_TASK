@@ -60,6 +60,16 @@ nav a:hover {
     padding: 20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
 }
 
 .radio-group {
@@ -95,11 +105,16 @@ input, select {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 20px auto;
     display: flex;
     gap: 20px;
     align-items: flex-start;
+}
+
+.container section {
+    flex: 3;
+    max-width: 0;
 }
 
 .map-container {
@@ -130,7 +145,6 @@ input, select {
     box-shadow: 0 0 4px rgb(0, 0, 0, 0.1);
     position: sticky;
     top: 20px;
-    width: 90%;
 }
 
 .footer-bar {
