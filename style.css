@@ -102,6 +102,10 @@ input, select {
     align-items: flex-start;
 }
 
+.content {
+    flex: 3;
+}
+
 .map-container {
     position: relative;
     overflow: hidden;
@@ -132,14 +136,10 @@ input, select {
     top: 20px;
 }
 
-.footer-bar {
-    background: green;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 30px;
+aside {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
 }
 
 @media (max-width: 768px) {
