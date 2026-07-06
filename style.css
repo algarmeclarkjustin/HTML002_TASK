@@ -130,12 +130,7 @@ input, select {
     box-shadow: 0 0 4px rgb(0, 0, 0, 0.1);
     position: sticky;
     top: 20px;
-}
-
-aside {
-    position: sticky;
-    top: 20px;
-    height: fit-content;
+    width: 90%;
 }
 
 .footer-bar {
