@@ -95,7 +95,7 @@ input, select {
 
 .container {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 20px auto;
     display: flex;
     gap: 20px;
