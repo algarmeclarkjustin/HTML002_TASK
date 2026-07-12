@@ -1,328 +1,424 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SMCC-CCIS-EVENT</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/ccis_logo.png" />
-
-    <script>
-      function registerStudent(event) {
-        event.preventDefault();
-
-        const fullname = document.getElementById("fullname").value;
-
-        document.getElementById("form-result").innerHTML =
-          "✔ Registration Successful! Welcome, <b>" + fullname + "</b>.";
-
-        document.getElementById("event-form").reset();
-      }
-    </script>
-  </head>
-  <body>
-    <main class="content">
-      <div class="wrapper">
-      <header class="top-header">
-        <h1>SMCC-CCIS Week 2026 - Campus Event Showcase</h1>
-        <p>
-          Celebrating innovation, technology, and collaboration accross the
-          campus.
-        </p>
-      </header>
-      <nav>
-        <a href="#Overview">Overview</a>
-        <a href="#Schedule">Schedule</a>
-        <a href="#location">location</a>
-        <a href="#forms">Registration</a>
-        <a href="#faq">FAQ</a>
-        <a href="#Demo">Tech Demo</a>
-      </nav>
-      <div class="container">
-        <section>
-          <article id="Overview" class="card">
-            <h2>Event Overview</h2>
-
-            <p>
-              <b>SMCC-CCIS Week 2026</b> is an annual campus event that
-              highlights student projects, programming skills, innovation,
-              cybersecurity awareness, and collaboration among future IT
-              professionals.
-            </p>
-            <br />
-
-            <p>
-              Join us for a week of learning, networking, and fun & excitement
-              as we celebrate technology in education. ✓
-            </p>
-
-            <img src="images/banner.png" alt="banner picture" />
-          </article>
-
-          <article id="Schedule" class="card">
-            <h2>Event Schedule</h2>
-
-            <p>Here is the simplified Schedule of activities</p>
-
-            <ul>
-              <li>Day 1 &rarr; Opening Program</li>
-              <li>Day 2 &rarr; Poster Making</li>
-              <li>Day 3 &rarr; Web Design</li>
-              <li>Day 4 &rarr; Capture the flags(CTF)</li>
-              <li>Day 5 &rarr; Awarding Ceremony and Closing Program</li>
-            </ul>
-          </article>
-
-          <article id="location" class="card">
-            <h2>2. Event Location and Map</h2>
-            <p>
-              All events will be held at the
-              <b>SMCC Main Campus - IT Building</b> <code>&lt;iframe&gt;</code>.
-              The iframe uses a relative width percentage to help
-              responsiveness.
-            </p>
-
-            <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.8263786192256!2d125.33938315710479!3d8.988118731784656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1782896727979!5m2!1sen!2sph"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-            </div>
-          </article>
-
-          <article id="forms" class="card">
-            <h2>Event Registration Form</h2>
-            <p>
-              Please Complete the form below to register for SMCC-CCIS Week
-              2026.
-            </p>
-            <br />
-            <form id="event-form" onsubmit="registerStudent(event)">
-              <div class="form-group">
-                <label for="fullname">Full Name:</label>
-                <input
-                  type="text"
-                  class="fullname"
-                  id="fullname"
-                  placeholder="Enter your complete name"
-                  required
-                /><br />
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input
-                  type="email"
-                  class="email"
-                  id="email"
-                  placeholder="example@gmail.com"
-                  required
-                /><br />
-              </div>
-
-              <div class="form-group">
-                <label for="studentid">Student ID Number:</label>
-                <input
-                  type="text"
-                  class="stud_id"
-                  id="stud_id"
-                  placeholder="Example: 202620012"
-                  pattern="[0-9]{9}"
-                  title="Student ID should contain exactly 9 digits."
-                  required
-                /><br />
-              </div>
-
-              <div class="form-group">
-                <label for="contact">Contact Number:</label>
-                <input
-                  type="tel"
-                  class="contact_num"
-                  id="contact_num"
-                  placeholder="Example: 09123456789"
-                  required
-                /><br />
-              </div>
-
-              <div class="form-group">
-                <label for="birthdate">Birth Date:</label>
-                <input
-                  type="date"
-                  class="birthdate"
-                  id="birthdate"
-                  required
-                /><br />
-              </div>
-
-              <div class="form-group">
-                <label for="arrivaltime">Prefered Arrival time:</label>
-                <input
-                  type="time"
-                  class="arrivaltime"
-                  id="arrivaltime"
-                  required
-                /><br />
-              </div>
-
-              <div class="form-group">
-                <label for="course">Program and Year:</label>
-                <select name="program" id="program" required>
-                  <option value="">Select Course</option>
-                  <option value="BSCS">BS in Computer Science</option>
-                  <option value="BSIT">BS in Information Technology</option>
-                  <option value="BLIS">
-                    Bachelor of Library Information Sytem
-                  </option>
-                  <option value="BSIS">BS in Information System</option>
-                </select>
-
-                <select name="year" id="year" required>
-                  <option value="">Year</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-              </div>
-              <br />
-
-              <label>Participant type:</label><br /><br /><br />
-              <div class="radio-group">
-                <label>Student</label>
-                <input
-                  type="radio"
-                  name="participant"
-                  id="student"
-                  class="student"
-                />
-
-                <label>Faculty</label>
-                <input
-                  type="radio"
-                  name="participant"
-                  id="faculty"
-                  class="faculty"
-                />
-
-                <label>Guest</label>
-                <input
-                  type="radio"
-                  name="participant"
-                  id="guest"
-                  class="guest"
-                />
-              </div>
-              <br /><br />
-
-              <label>Events to join:</label><br /><br /><br />
-              <div class="radio-group">
-                <label>Poster Making</label>
-                <input type="checkbox" name="activity" value="poster" />
-
-                <label>Web Design</label>
-                <input type="checkbox" name="activity" value="webdesign" />
-
-                <label>Capture The Flag(CTF)</label>
-                <input type="checkbox" name="activity" value="ctf" /><br />
-              </div>
-
-              <div>
-                <label for="">Upload Proof of Registration or School ID:</label>
-                <input
-                  type="file"
-                  name="file"
-                  id="file"
-                  accept=".png,.jpg,.jpeg,.pdf"
-                /><br /><br />
-              </div>
-
-              <div>
-                <label for="reason">Reason For Joining</label><br /><br />
-                <textarea
-                  name="comments"
-                  id="comments"
-                  rows="6"
-                  placeholder="Write your reason for joining the event..."
-                  maxlength="200"
-                ></textarea>
-              </div>
-
-              <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                <button class="primary-btn" type="submit">
-                  Submit Registration
-                </button>
-                <button class="reset-btn" type="submit">Clear Form</button>
-              </div>
-              <p id="form-result" class="success"></p>
-            </form>
-          </article>
-          <article id="faq" class="card">
-            <h2>Frequently Ask Questions</h2>
-            <p>Use the button below to interact with the page.</p>
-
-            <button>Toggle FAQ Visibility</button>
-
-            <p><b>1. Is the event open to all students?</b></p>
-            <p>Yes, the event is open to alldepartments and year levels.</p>
-            <br />
-
-            <p><b>2. Do I need to register?</b></p>
-            <p>
-              Yes, registration is required for competitions, workshops, and
-              project showcases
-            </p>
-            <br />
-
-            <p><b>3. is there a registration fee? </b></p>
-            <p>No, all SMCC-CCIS Week 2026 activities are free of charge</p>
-            <br />
-          </article>
-
-          <article id="Demo" class="card">
-            <h2>Tech Demo & Developer Notes</h2>
-
-            <p>Sample Command Using <code>"<pre> and <code>"</code> </p>
-
-              <pre><code>
-                // Clone the SMCC-CCIS Week repository
-                git clone https://github.com/example/ccisweek2026.git
-                
-                // Install dependencies
-                npm install
-                
-                // Start development server
-                npm run dev
-              </code></pre>
-          </article>
-        </section>
-    </main>
-    
-        <aside class="sidebar">
-          <h3>Event Info & Contacts</h3>
+<!DOCTYPE html>
+<html>
+<head>
+<title>SMCC-CCIS Week 2026 – Campus Event Showcase</title>
+<link rel="icon" type="image/png" href="images/ccis_logo.png">
+<link rel="stylesheet" href="style.css">
 
 
-          <hr>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-          <h4>Character Encoding</h4>
-          <p>
-            This uses UTF-8 encoding, defined as   
-          </p>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-          <div class="code-block">
-            <code>&lt;meta charset="UTF-8"&gt;</code>
-          </div>
+<script>
+function toggleFAQ(){
+var x=document.getElementById("faqContent");
+if(x.style.display==="block"){
+x.style.display="none";
+}else{
+x.style.display="block";
+}
+}
+</script>
 
-          <p>Special characters and entities: 2026 SMCC-CCIS Week Made with</p>
-        </aside>
-      </div>
-      <footer class="footer-bar">
-        SMCC-ccis Week 2026 - Campus Event Showcase | Made with HTML, CSS & Javascript
-      </footer>
+
+</head>
+
+<body>
+
+<header class="w3-container w3-green w3-center w3-padding-32">
+
+
+<h1>
+SMCC-CCIS Week 2026– Campus Event Showcase🎉
+</h1>
+
+<p>
+Celebrating innovation, technology, and collaboration across the campus.
+</p>
+
+</header>
+
+<div class="w3-bar w3-light-grey">
+
+<a href="#overview" class="w3-bar-item w3-button">Overview</a>
+
+<a href="#schedule" class="w3-bar-item w3-button">Schedule</a>
+
+<a href="#location" class="w3-bar-item w3-button">Location</a>
+
+<a href="#registration" class="w3-bar-item w3-button">Registration</a>
+
+<a href="#faq" class="w3-bar-item w3-button">FAQ</a>
+
+<a href="#tech-demo" class="w3-bar-item w3-button">Tech Demo</a>
+
+</div>
+
+<div class="w3-content" style="max-width:1200px">
+
+<div class="w3-row-padding w3-padding-16">
+
+<!-- LEFT SIDE -->
+
+<div class="w3-twothird">
+
+<div class="w3-card w3-white w3-padding" id="overview">
+
+<h2><b>Event Overview ★</b></h2>
+
+<p>
+<b>SMCC-CCIS Week 2026</b> is an annual campus event that highlights student
+projects, programming skills, innovation, cybersecurity awareness,
+and collaboration among future IT professionals.
+</p>
+
+<p>
+Join us for a week of learning, networking, and fun as we celebrate
+technology in education.
+</p>
+
+<img
+src="images/banner.png"
+class="w3-image"
+style="width:100%;">
+
+</div>
+
+<div class="w3-card w3-white w3-padding" id="schedule">
+
+<h2><b>Event Schedule</b> </h2>
+
+
+<table>
+
+<tr>
+<th>Day</th>
+<th>Activity</th>
+</tr>
+
+<tr>
+<td>Day 1</td>
+<td>Opening Program</td>
+</tr>
+
+<tr>
+<td>Day 2</td>
+<td>Capture The Flag Competition</td>
+</tr>
+
+<tr>
+<td>Day 3</td>
+<td>Robotics and IoT Exhibition</td>
+</tr>
+
+<tr>
+<td>Day 4</td>
+<td>Cybersecurity Awareness Session</td>
+</tr>
+
+<tr>
+<td>Day 5</td>
+<td>Project Showcase and Awarding Ceremony 🏆</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="w3-card w3-white w3-padding" id="location">
+
+<h2><b>Event Location</b></h2>
+
+<p>
+All events will be held at the
+<b>SMCC Quadrangle Main Campus </b>
+Use the embedded map below to find the location easily.
+</p>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.824764586886!2d125.33782747501841!3d8.988267091071442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1783160952628!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+</div>
+
+<div class="w3-card w3-white w3-padding" id="registration">
+
+<h2><b>Event Registration Form </b></h2>
+
+<p>Please complete the form below to register for SMCC-CCIS Week 2026.</p>
+
+<form>
+
+<label><b>Full Name:</b></label>
+
+<input
+class="w3-input w3-border"
+type="text"
+placeholder="Enter your complete name"
+required>
+
+<label><b>Email Address:</b></label>
+
+<input
+class="w3-input w3-border"
+type="email"
+placeholder="example@gmail.com"
+required>
+
+<label><b>Student ID Number:</b></label>
+
+<input
+class="w3-input w3-border"
+type="text"
+placeholder="Example: 202500123"
+required>
+
+<label><b>Contact Number:</b></label>
+
+<input
+class="w3-input w3-border"
+type="tel"
+placeholder="Example: 09123456789"
+required>
+
+<label><b>Birthdate:</b></label>
+
+<input
+class="w3-input w3-border"
+type="date"
+required>
+
+<label><b>Preferred Arrival Time:</b></label>
+
+<input
+class="w3-input w3-border"
+type="time"
+required>
+
+<label><b>Year Level:</b></label>
+
+<select class="w3-select w3-border" required>
+
+<option value="">Select Year Level</option>
+
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+
+</select>
+
+<p><b>Participant Type:</b></p>
+
+<input type="radio" name="participant"> Student<br>
+
+<input type="radio" name="participant"> Faculty<br>
+
+<input type="radio" name="participant"> Guest
+
+<br><br>
+
+<p><b>Events to Join:</b></p>
+
+<input type="checkbox"> Coding Hackathon<br>
+
+<input type="checkbox"> Tech Quiz Bowl<br>
+
+<input type="checkbox"> Robotics Exhibition<br>
+
+<input type="checkbox"> Project Showcase
+
+<br><br>
+
+<label><b>Upload Proof of Registration or School ID:</b></label>
+
+<input
+class="w3-input w3-border"
+type="file">
+
+<label><b>Reason for Joining:</b></label>
+
+<textarea
+class="w3-input w3-border"
+rows="5"
+placeholder="Write your reason for joining the event..."></textarea>
+
+<button
+class="w3-button w3-green">
+Submit Registration
+</button>
+
+<button
+class="w3-button w3-dark-grey"
+type="reset">
+Clear Form
+</button>
+
+</form>
+
+</form>
+
+<!-- FAQ -->
+<div class="w3-card w3-white w3-padding w3-margin-top" id="faq">
+
+    <h2><b>Frequently Asked Questions</b></h2>
+
+    <p>Click the button below to show or hide the answers.</p>
+
+    <button
+    class="w3-button w3-green"
+    onclick="toggleFAQ()">
+    Toggle FAQ Visibility
+    </button>
+
+    <div id="faqContent" style="display:none; margin-top:15px;">
+
+        <h4>1. Is the event open to all students?</h4>
+        <p>Yes. The event is open to all departments and year levels.</p>
+
+        <h4>2. Do I need to register?</h4>
+        <p>Yes. Registration is required for competitions, workshops, and project showcases.</p>
+
+        <h4>3. Is there a registration fee?</h4>
+        <p>No. All SMCC-CCIS Week 2025 activities are free of charge.</p>
+
     </div>
-  </body>
+
+</div>
+
+
+<div class="w3-card w3-white w3-padding w3-margin-top" id="tech-demo">
+
+    <h2><b>Tech Demo & Developer Notes</b></h2>
+
+    <p>Sample Command Using &lt;pre&gt; and &lt;code&gt;</p>
+
+    <pre class="w3-panel w3-dark-grey"><code>
+
+    </code></pre>
+
+    <p>
+    To save your changes, press
+    <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+    Example system output using
+    <samp>Build Successful. No errors found.</samp>
+    </p>
+
+</div>
+
+
+<div class="w3-card w3-white w3-padding w3-margin-top">
+
+    <h2>Registration URL Example</h2>
+
+    <p>Example registration URL with encoded spaces and symbols:</p>
+
+    <pre class="w3-panel w3-dark-grey"><code>
+https://myschool.edu/events/register?event=SMCC%20CCIS%20Week%202025&section=A
+    </code></pre>
+
+    <p><b>%20</b> represents a space in the URL.</p>
+
+</div>
+
+
+<div class="w3-card w3-white w3-padding w3-margin-top">
+
+    <h2>HTML vs XHTML Example</h2>
+
+    <pre class="w3-panel w3-dark-grey"><code>
+
+<br>
+<img src="images/logo.jpg" alt="Event Logo">
+
+
+<br />
+<img src="images/logo.png" alt="Event Logo" />
+    </code></pre>
+
+    <p>XHTML requires properly closed tags and quoted attributes.</p>
+
+</div>
+
+<div class="w3-card w3-white w3-padding w3-margin-top" id="faq">
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="w3-third">
+
+<div class="w3-card w3-white w3-padding">
+
+<h3><b>Event Info &amp; Contacts</b></h3>
+
+<p>
+SMCC-CCIS Week 2025 is organized by the
+College of Computing and Information Sciences.
+</p>
+
+<p>
+For inquiries:
+<b>ccisweek@myschool.edu</b>
+</p>
+
+<hr>
+
+<h4>Event Highlights:</h4>
+
+<ul>
+<li>Live coding sessions</li>
+<li>Industry speakers</li>
+<li>Project exhibits</li>
+<li>Tech Quiz Bowl</li>
+<li>Cybersecurity Seminar</li>
+</ul>
+
+<hr>
+
+<h4>Character Encoding</h4>
+
+<p>This page uses UTF-8 encoding.</p>
+
+<pre class="w3-panel w3-dark-grey">
+&lt;meta charset="UTF-8"&gt;
+</pre>
+
+
+</div>
+
+
+
+<div class="w3-content">
+
+    <div class="w3-row-padding">
+
+        <div class="w3-twothird">
+            
+        </div>
+
+        <div class="w3-third">
+            
+        </div>
+
+    </div> 
+
+</div>
+</div>
+</div>
+
+<footer class="w3-container w3-green w3-center w3-padding-16">
+    <p>
+        © 2025 SMCC-CCIS Week - Campus Event Showcase |
+        Made with HTML, CSS & JavaScript ✓
+    </p>
+</footer>
+</body>
 </html>
